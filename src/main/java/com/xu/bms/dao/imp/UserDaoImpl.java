@@ -15,8 +15,14 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User selectByUsernameAndPassword(String username, String password) {
+        System.out.println(username);
+        System.out.println(password);
         String sql = "select * from user where username = ? and password = ?";
         List<User> users = JDBCUtils.executeQuery(User.class, sql, username, password);
-        return null;
+        System.out.println("users:"+users);
+        if (users == null || users.size() == 0){
+            return null;
+        }
+        return users.get(0);
     }
 }

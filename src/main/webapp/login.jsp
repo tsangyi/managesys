@@ -57,6 +57,7 @@
 							<input type="checkbox" name="remember" title="记住我"  lay-skin="primary">
 						</div>
 						<div class="layui-form-item">
+							<p>${error}</p>
 							<button class="layui-btn layui-btn-fluid login_but" lay-submit lay-filter="loginBut">登 录</button>
 						</div>
 <%--						<div class="layui-form-item">--%>

@@ -2,9 +2,6 @@ package com.xu.bms.util;
 
 /**
  * 字符串工具类
- *
- * @author shangzf
- * @date 2019/9/9 10:38
  */
 public final class StringUtils {
     private StringUtils() {

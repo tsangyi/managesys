@@ -15,9 +15,9 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public boolean login(String username, String password) {
-        System.out.println(username);
+        System.out.println("loginService:"+username);
         System.out.println(password);
         User user = userDao.selectByUsernameAndPassword(username, password);
-        return user != null && user.getPassword().equals(password);
+        return user != null;
     }
 }

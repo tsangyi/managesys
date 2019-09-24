@@ -28,6 +28,7 @@ import java.util.Properties;
  * 1.实体类型中字段名称和数据库表中的列名要保持一致,否则会出现null
  * 2.在使用数字类型时,如果数据库表中的列的类型为decimal类型,则转换成Java的类型为BigDecimal
  * 3.在使用日期类型时,如果数据库表中的列的类型为time/date/timestamp类型,则转换成Java的类型为date
+ * @author xu
  */
 public class JDBCUtils {
 
@@ -92,13 +93,15 @@ public class JDBCUtils {
         }
     }
 
-
     public static void close(Statement stmt, Connection conn) {
         close(null, stmt, conn);
     }
 
     /**
-
+     *
+     * @param sql
+     * @param params
+     * @return
      */
     public static int executeUpdate(String sql, Object... params) {
         Connection conn = null;
